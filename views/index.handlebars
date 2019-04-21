@@ -1,0 +1,44 @@
+<div class="container">
+    {{#each articles }}
+    <div class="articles card">
+        <div class="card-header" style="background-color: rgb(252, 216, 248)">
+            {{this.title}}
+            <button type="button" class="btn btn-info makeNote" style="float: right" data-toggle="modal" data-target="#noteModal" data-value={{this._id}}>
+                View/Make
+                Notes</button>
+        </div>
+        <ul class="links">
+            <a href={{this.link}} target="_blank">Read This Story</a>
+        </ul>
+    </div> <br>
+    <div id="noteModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="noteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id=""><b>Notes:</b></h4>
+                    <div>
+                        <ul id="notesBody">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleTextarea">Enter New Note</label>
+                        <textarea class="form-control" id="notestext" rows="3"></textarea>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button data-id={{_id}} data-dismiss="modal" id="saveButton" class="btn btn-primary savenote">Save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

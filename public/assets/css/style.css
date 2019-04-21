@@ -1,0 +1,20 @@
+/* div.articles.card{
+    align-items: center;
+    width: 50%;
+} */
+
+/* .list-group{
+text-align: center;
+padding-left:auto;
+} */
+.navbar {
+    background:black;
+}
+.card{
+    clear:both;
+    margin: auto;
+}
+
+.card-header{
+    background-color: rgb(244, 189, 237);
+}
